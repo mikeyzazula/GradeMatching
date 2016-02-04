@@ -1,12 +1,8 @@
 # GradeMatching
 To help make things a but more efficent at work, I've implemented a very simple hashmap tailored to fix an issue with some excel grade spread sheets we receive sometimes at work. 
 
-The first argument is the canvas gradebook CSV, we just need the SIS ids here and throw them in a hash map as keys 
+The first argument is the canvas gradebook CSV in the format we need to use to upload the gradebook.
 
-The second argument is the test score CSV we receive, but we don't have scores for students that were absent from the test, so we need to give them a zero. 
+The second argument is the test score CSV we receive, it's missing SIS ids and grades for the students absent. 
 
-We output a new csv with the SIS ids and the scores to be added to verify everything looks ok, then just copy the cells over to the canvas CSV we plan to upload. 
-
-Issues:
-
-Still working on ["score"]
+We output a new csv with all the SIS ids and the scores and the students who were absent get a zero. We verify and copy over the cells to the canvas gradebook we plan to upload.

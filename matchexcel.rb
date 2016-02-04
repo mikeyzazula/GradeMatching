@@ -18,6 +18,7 @@ def clean_og(canvas_ex,hash)
 	CSV.foreach(canvas_ex) do |row|	
 		if row[2] != nil 
 			if row[2].include? "F" 
+				#assign everyone a 
 				hash[row[2]] = 0
 			end			
 		end
@@ -32,8 +33,8 @@ def clean_test(test_ex,canvasHash)
 		if row[2].include? "F"
 			#if statement to verify there's a score in that column r
 			if row[5] != nil && row[5].length <=3 
-				#replaces zeroes with scores
-				canvasHash[row[2]] = [row[5]]
+				#replaces zeroes with scores if available
+				canvasHash[row[2]] = row[5]
 
 			end
 		end		
