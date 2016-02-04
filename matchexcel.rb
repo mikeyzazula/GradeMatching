@@ -13,7 +13,7 @@ def main()
 end
 
 
-#gets wnumbers and sets the scores to all zero
+#gets fnumbers and sets the scores to all zero
 def clean_og(canvas_ex,hash)
 	CSV.foreach(canvas_ex) do |row|	
 		if row[2] != nil 
