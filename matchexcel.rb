@@ -18,7 +18,7 @@ def clean_og(canvas_ex,hash)
 	CSV.foreach(canvas_ex) do |row|	
 		if row[2] != nil 
 			if row[2].include? "F" 
-				#assign everyone a 
+				#assign everyone a 0
 				hash[row[2]] = 0
 			end			
 		end
